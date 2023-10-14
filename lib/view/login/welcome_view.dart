@@ -93,7 +93,7 @@ class _WelcomeViewState extends State<WelcomeView> {
             Center(
               child: Text(
                 "Meraklı Nedir? ",
-                style: AppTextStyle.AeonikBold(context),
+                style: AppTextStyle.aeonikBold(context),
               ),
             ),
             Padding(
@@ -102,7 +102,7 @@ class _WelcomeViewState extends State<WelcomeView> {
                 child: Text(
                   textWhy,
                   textAlign: TextAlign.center,
-                  style: AppTextStyle.AeonikRegular(context),
+                  style: AppTextStyle.aeonikRegular(context),
                 ),
               ),
             ),
@@ -140,7 +140,7 @@ class _WelcomeViewState extends State<WelcomeView> {
             Center(
               child: Text(
                 "Neden Kullanmalı? ",
-                style: AppTextStyle.AeonikBold(context),
+                style: AppTextStyle.aeonikBold(context),
               ),
             ),
             Padding(
@@ -149,7 +149,7 @@ class _WelcomeViewState extends State<WelcomeView> {
                 child: Text(
                   textWhat,
                   textAlign: TextAlign.center,
-                  style: AppTextStyle.AeonikRegular(context),
+                  style: AppTextStyle.aeonikRegular(context),
                 ),
               ),
             ),
@@ -174,7 +174,7 @@ class _WelcomeViewState extends State<WelcomeView> {
             return Container(
               width: 12.0,
               height: 12.0,
-              margin: EdgeInsets.symmetric(horizontal: 4.0),
+              margin: const EdgeInsets.symmetric(horizontal: 4.0),
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 color: index == _currentPage

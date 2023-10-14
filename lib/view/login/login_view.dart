@@ -38,7 +38,7 @@ class _LoginViewState extends State<LoginView> {
             children: [
               Text(
                 "Hesabınız Yok mu?",
-                style: AppTextStyle.InterTight(context),
+                style: AppTextStyle.interTight(context),
               ),
               TextButton(
                 onPressed: () {
@@ -47,7 +47,7 @@ class _LoginViewState extends State<LoginView> {
                 },
                 child: Text(
                   "Üye Olun!",
-                  style: AppTextStyle.InterTight(context),
+                  style: AppTextStyle.interTight(context),
                 ),
               ),
               Image.asset(Assets.image.imLinePNG),
@@ -66,7 +66,7 @@ class _LoginViewState extends State<LoginView> {
                   borderRadius: BorderRadius.circular(0),
                   borderSide: BorderSide(color: Color(0xFFC4CDD5))),
               hintText: "kullanici@mail.com",
-              hintStyle: AppTextStyle.InterTight(context)
+              hintStyle: AppTextStyle.interTight(context)
                   .copyWith(color: const Color(0xFFC4CDD5), fontSize: 20),
               leading: Padding(
                 padding: const EdgeInsets.all(16.0),
@@ -88,7 +88,7 @@ class _LoginViewState extends State<LoginView> {
                   borderSide: BorderSide(color: Color(0xFFC4CDD5))),
               obscureText: isObscure,
               hintText: "Şifre",
-              hintStyle: AppTextStyle.InterTight(context)
+              hintStyle: AppTextStyle.interTight(context)
                   .copyWith(color: const Color(0xFFC4CDD5), fontSize: 20),
               leading: Padding(
                 padding: const EdgeInsets.all(16.0),

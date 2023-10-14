@@ -38,7 +38,7 @@ class _CustomDropdownMenuState extends State<CustomDropdownMenu> {
               child: SvgPicture.asset(Assets.icon.icCaretDownSVG),
             ),
             value: dropdownValue,
-            style: AppTextStyle.ArialText(context).copyWith(
+            style: AppTextStyle.arialText(context).copyWith(
                 color: const Color(0xFF258661),
                 fontSize: 20,
                 fontWeight: FontWeight.w400),

@@ -1,8 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_merakli/core/constants/app_color.dart';
-import 'package:flutter_merakli/core/constants/app_textstyle.dart';
 
 class CustomTextField extends StatelessWidget {
   final bool obscureText;
@@ -18,7 +16,7 @@ class CustomTextField extends StatelessWidget {
   final List<TextInputFormatter>? inputFormatters;
   final TextInputType? keyboardType;
 
-  CustomTextField(
+  const CustomTextField(
       {this.obscureText = false,
       this.controller,
       this.onTap,

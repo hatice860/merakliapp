@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_merakli/assets.dart';
 import 'package:flutter_merakli/core/constants/app_color.dart';
 import 'package:flutter_merakli/core/constants/app_textstyle.dart';
-import 'package:flutter_merakli/view/home/home_view.dart';
 import 'package:flutter_merakli/view/login/welcome_view.dart';
 
 class SplashView extends StatefulWidget {

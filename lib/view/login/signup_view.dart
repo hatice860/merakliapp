@@ -44,7 +44,7 @@ class _SignupViewState extends State<SignupView> {
             padding: const EdgeInsets.symmetric(vertical: 12.0),
             child: Text(
               "Hesap Oluştur",
-              style: AppTextStyle.ArialText(context),
+              style: AppTextStyle.arialText(context),
             ),
           ),
           Padding(
@@ -52,7 +52,7 @@ class _SignupViewState extends State<SignupView> {
             child: CustomTextField(
                 controller: _nameController,
                 hintText: "İsim Soyisim",
-                hintStyle: AppTextStyle.ArialText(context).copyWith(
+                hintStyle: AppTextStyle.arialText(context).copyWith(
                     color: const Color(0xFF258661),
                     fontSize: 20,
                     fontWeight: FontWeight.w400),
@@ -64,7 +64,7 @@ class _SignupViewState extends State<SignupView> {
                       vertical: 16.0, horizontal: 12),
                   child: Text(
                     "Isim Soyisim",
-                    style: AppTextStyle.AeonikRegular(context)
+                    style: AppTextStyle.aeonikRegular(context)
                         .copyWith(fontSize: 10, fontWeight: FontWeight.w400),
                   ),
                 )),
@@ -74,7 +74,7 @@ class _SignupViewState extends State<SignupView> {
             child: CustomTextField(
                 controller: _emailController,
                 hintText: "hesap@mail.com",
-                hintStyle: AppTextStyle.ArialText(context).copyWith(
+                hintStyle: AppTextStyle.arialText(context).copyWith(
                     color: const Color(0xFF258661),
                     fontSize: 20,
                     fontWeight: FontWeight.w400),
@@ -86,7 +86,7 @@ class _SignupViewState extends State<SignupView> {
                       vertical: 16.0, horizontal: 12),
                   child: Text(
                     "E-mail",
-                    style: AppTextStyle.AeonikRegular(context)
+                    style: AppTextStyle.aeonikRegular(context)
                         .copyWith(fontSize: 10, fontWeight: FontWeight.w400),
                   ),
                 )),
@@ -104,7 +104,7 @@ class _SignupViewState extends State<SignupView> {
                 keyboardType: TextInputType
                     .phone, // Sadece telefon numarası formatı için klavye kullanılmasını sağlar
                 hintText: "0555 555 55 55",
-                hintStyle: AppTextStyle.ArialText(context).copyWith(
+                hintStyle: AppTextStyle.arialText(context).copyWith(
                     color: const Color(0xFF258661),
                     fontSize: 20,
                     fontWeight: FontWeight.w400),
@@ -116,7 +116,7 @@ class _SignupViewState extends State<SignupView> {
                       vertical: 16.0, horizontal: 12),
                   child: Text(
                     "Telefon",
-                    style: AppTextStyle.AeonikRegular(context)
+                    style: AppTextStyle.aeonikRegular(context)
                         .copyWith(fontSize: 10, fontWeight: FontWeight.w400),
                   ),
                 )),
@@ -127,7 +127,7 @@ class _SignupViewState extends State<SignupView> {
                 controller: _passwordController,
                 obscureText: true,
                 hintText: "Şifre",
-                hintStyle: AppTextStyle.ArialText(context).copyWith(
+                hintStyle: AppTextStyle.arialText(context).copyWith(
                     color: const Color(0xFF258661),
                     fontSize: 20,
                     fontWeight: FontWeight.w400),
@@ -139,7 +139,7 @@ class _SignupViewState extends State<SignupView> {
                       vertical: 16.0, horizontal: 12),
                   child: Text(
                     "Sifre",
-                    style: AppTextStyle.AeonikRegular(context)
+                    style: AppTextStyle.aeonikRegular(context)
                         .copyWith(fontSize: 10, fontWeight: FontWeight.w400),
                   ),
                 )),
@@ -175,7 +175,7 @@ class _SignupViewState extends State<SignupView> {
                       selectedDate != null
                           ? "${selectedDate!.day}/${selectedDate!.month}/${selectedDate!.year}"
                           : "Doğum Tarihi",
-                      style: AppTextStyle.ArialText(context).copyWith(
+                      style: AppTextStyle.arialText(context).copyWith(
                           color: const Color(0xFF258661),
                           fontSize: 20,
                           fontWeight: FontWeight.w400)),
@@ -204,7 +204,7 @@ class _SignupViewState extends State<SignupView> {
                     onPressed: () {},
                     child: Text(
                       "Kullanıcı Sözleşmesi",
-                      style: AppTextStyle.ArialText(context)
+                      style: AppTextStyle.arialText(context)
                           .copyWith(fontSize: 14, fontWeight: FontWeight.w400),
                     ))
               ],

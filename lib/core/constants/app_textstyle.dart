@@ -18,22 +18,22 @@ class AppTextStyle {
       color: AppColor.splashTextColor,
       fontWeight: FontWeight.w300,
       fontFamily: "Akshar");
-  static TextStyle AeonikBold(context) => const TextStyle(
+  static TextStyle aeonikBold(context) => const TextStyle(
       fontSize: 36,
       color: AppColor.splashTextColor,
       fontWeight: FontWeight.w700,
       fontFamily: "Aeonik");
-  static TextStyle AeonikRegular(context) => const TextStyle(
+  static TextStyle aeonikRegular(context) => const TextStyle(
       fontSize: 20,
       color: AppColor.splashTextColor,
       fontWeight: FontWeight.w100,
       fontFamily: "AeonikRegular");
-        static TextStyle InterTight(context) => const TextStyle(
+        static TextStyle interTight(context) => const TextStyle(
       fontSize: 28,
       color: Color(0xFF24415C),
       fontWeight: FontWeight.w400,
       fontFamily: "InterTight");
-              static TextStyle ArialText(context) => const TextStyle(
+              static TextStyle arialText(context) => const TextStyle(
       fontSize: 20,
       color: Color(0xFF258661),
       fontWeight: FontWeight.w700,
