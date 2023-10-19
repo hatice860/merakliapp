@@ -1,7 +1,9 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_merakli/core/components/custom_bottom_bar.dart';
 import 'package:flutter_merakli/firebase_options.dart';
+import 'package:flutter_merakli/view/home/question_view.dart';
 import 'package:flutter_merakli/view/login/welcome_view.dart';
 
 void main() async {
@@ -29,6 +31,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: myTheme,
-        home: SafeArea(child: WelcomeView()));
+        home: SafeArea(child: QuestionView()));
   }
 }

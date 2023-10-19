@@ -125,7 +125,7 @@ class _WelcomeViewState extends State<WelcomeView> {
               begin: Alignment.topCenter,
               end: Alignment.center,
               colors: [
-                Color.fromARGB(255, 37, 152, 125).withOpacity(0.7),
+                const Color.fromARGB(255, 37, 152, 125).withOpacity(0.7),
                 AppColor.primaryColor.withOpacity(0.3),
                 AppColor.primaryColor.withOpacity(0.3)
               ],
@@ -169,7 +169,7 @@ class _WelcomeViewState extends State<WelcomeView> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: List.generate(
-          2, // Toplam sayfa sayısı
+          2, 
           (index) {
             return Container(
               width: 12.0,
