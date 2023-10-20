@@ -146,9 +146,7 @@ class _SignupViewState extends State<SignupView> {
           ),
           Row(
             children: [
-              CustomDropdownMenu(
-                list: const ['Cinsiyet', 'Kadın', 'Erkek', 'Diğer'],
-              ),
+              CustomDropdownMenu(),
               const Spacer(),
               OutlinedButton(
                 style: OutlinedButton.styleFrom(
@@ -224,11 +222,10 @@ class _SignupViewState extends State<SignupView> {
                       duration: Duration(seconds: 3),
                     ),
                   );
-                                    return Navigator.push(
+                  return Navigator.push(
                       context,
                       MaterialPageRoute(
                           builder: (context) => const LoginView()));
-
                 }).catchError((error) {
                   print('Kayıt sırasında hata oluştu: $error');
                 });

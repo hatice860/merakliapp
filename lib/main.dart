@@ -5,11 +5,12 @@ import 'package:flutter_merakli/core/components/custom_bottom_bar.dart';
 import 'package:flutter_merakli/firebase_options.dart';
 import 'package:flutter_merakli/view/home/question_view.dart';
 import 'package:flutter_merakli/view/login/welcome_view.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  runApp(const MyApp());
+  runApp(const ProviderScope(child:  MyApp()));
   //status barı kaldırmak için
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
       overlays: [SystemUiOverlay.bottom]);
@@ -31,6 +32,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: myTheme,
-        home: SafeArea(child: QuestionView()));
+        home: SafeArea(child: WelcomeView()));
   }
 }

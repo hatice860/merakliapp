@@ -5,7 +5,7 @@ import 'package:flutter_merakli/core/components/custom_elevated_button.dart';
 import 'package:flutter_merakli/core/components/custom_textfield.dart';
 import 'package:flutter_merakli/core/constants/app_textstyle.dart';
 import 'package:flutter_merakli/service/auth.dart';
-import 'package:flutter_merakli/view/home/home_view.dart';
+import 'package:flutter_merakli/view/home/question_view.dart';
 import 'package:flutter_merakli/view/login/signup_view.dart';
 import 'package:svg_flutter/svg.dart';
 
@@ -26,10 +26,10 @@ class _LoginViewState extends State<LoginView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-          preferredSize: CustomAppbar(
+          preferredSize: const CustomAppbar(
             title: "",
           ).preferredSize,
-          child: CustomAppbar(title: "Meraklı")),
+          child: const CustomAppbar(title: "Meraklı")),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -43,7 +43,7 @@ class _LoginViewState extends State<LoginView> {
               TextButton(
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => SignupView()));
+                      MaterialPageRoute(builder: (context) =>const SignupView()));
                 },
                 child: Text(
                   "Üye Olun!",
@@ -53,7 +53,7 @@ class _LoginViewState extends State<LoginView> {
               Image.asset(Assets.image.imLinePNG),
             ],
           ),
-          SizedBox(
+         const  SizedBox(
             height: 20,
           ),
           Padding(
@@ -64,7 +64,7 @@ class _LoginViewState extends State<LoginView> {
               controller: _emailController,
               enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(0),
-                  borderSide: BorderSide(color: Color(0xFFC4CDD5))),
+                  borderSide: const BorderSide(color:  Color(0xFFC4CDD5))),
               hintText: "kullanici@mail.com",
               hintStyle: AppTextStyle.interTight(context)
                   .copyWith(color: const Color(0xFFC4CDD5), fontSize: 20),
@@ -85,7 +85,7 @@ class _LoginViewState extends State<LoginView> {
               controller: _passwordController,
               enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(0),
-                  borderSide: BorderSide(color: Color(0xFFC4CDD5))),
+                  borderSide:const BorderSide(color: Color(0xFFC4CDD5))),
               obscureText: isObscure,
               hintText: "Şifre",
               hintStyle: AppTextStyle.interTight(context)
@@ -125,7 +125,7 @@ class _LoginViewState extends State<LoginView> {
                         _emailController.text, _passwordController.text)
                     .then((value) {
                   return Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => HomeView()));
+                      MaterialPageRoute(builder: (context) => const QuestionView()));
                 });
               },
               text: "Giris Yap",

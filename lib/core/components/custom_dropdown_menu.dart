@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_merakli/assets.dart';
 import 'package:flutter_merakli/core/constants/app_textstyle.dart';
+import 'package:flutter_merakli/core/model/gender_model.dart';
 import 'package:svg_flutter/svg.dart';
 
 class CustomDropdownMenu extends StatefulWidget {
-  final List<String> list;
+  final List<GenderModel> genders = [
+    GenderModel("Kadın"),
+    GenderModel("Erkek"),
+    GenderModel("Cinsiyet")
+  ];
 
-  CustomDropdownMenu({
-    Key? key,
-    required this.list,
-  });
+  CustomDropdownMenu({super.key});
 
   @override
   State<CustomDropdownMenu> createState() => _CustomDropdownMenuState();
@@ -26,9 +28,9 @@ class _CustomDropdownMenuState extends State<CustomDropdownMenu> {
           height: 40,
           width: MediaQuery.of(context).size.width * 0.33,
           decoration:
-              BoxDecoration(border: Border.all(color: Color(0xFFBCE0FD))),
+              BoxDecoration(border: Border.all(color: const Color(0xFFBCE0FD))),
           child: DropdownButton(
-            dropdownColor: Color(0xFFFFFFFF),
+            dropdownColor: const Color(0xFFFFFFFF),
             underline: Container(
               height: 2,
               color: Colors.transparent,
@@ -48,12 +50,13 @@ class _CustomDropdownMenuState extends State<CustomDropdownMenu> {
               });
             },
             elevation: 0,
-            items: widget.list.map<DropdownMenuItem<String>>((String value) {
+            items: widget.genders
+                .map<DropdownMenuItem<String>>((GenderModel value) {
               return DropdownMenuItem(
-                value: value,
+                value: value.name,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Text(value),
+                  child: Text(value.name),
                 ),
               );
             }).toList(),
