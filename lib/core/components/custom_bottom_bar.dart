@@ -18,11 +18,13 @@ class _CustomBottomBarState extends State<CustomBottomBar> {
   @override
   Widget build(BuildContext context) {
     return CurvedNavigationBar(
+      
         onTap: (index) {
           setState(() {
             _index = index;
           });
         },
+        
         animationCurve: Curves.easeInOutExpo,
         backgroundColor: Colors.white,
         color: const Color(0xFFF0F0F0),

@@ -108,3 +108,6 @@ flutter:
       fonts:
         - asset: assets/font/arial.ttf
           weight: 700
+    - family: AeonikLight
+      fonts:
+        - asset: assets/font/aeonikTRIAL-Light.otf

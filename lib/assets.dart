@@ -29,4 +29,5 @@ class _AssetsIcon {
   final icUsersSocialSVG = 'assets/icon/ic_users_social.svg';
   final icSearchSVG = 'assets/icon/ic_search.svg';
   final icEllipsSVG = 'assets/icon/ic_ellipse.svg';
+  final icMenuSVG = 'assets/icon/ic_menu.svg';
 }

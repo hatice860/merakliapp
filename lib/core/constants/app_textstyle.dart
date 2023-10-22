@@ -23,6 +23,11 @@ class AppTextStyle {
       color: AppColor.splashTextColor,
       fontWeight: FontWeight.w700,
       fontFamily: "Aeonik");
+        static TextStyle aeonikLight(context) => const TextStyle(
+      fontSize: 22,
+      color: AppColor.splashTextColor,
+      fontWeight: FontWeight.w400,
+      fontFamily: "AeonikLight");
   static TextStyle aeonikRegular(context) => const TextStyle(
       fontSize: 20,
       color: AppColor.splashTextColor,

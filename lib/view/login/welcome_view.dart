@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_merakli/assets.dart';
 import 'package:flutter_merakli/core/components/custom_elevated_button.dart';
+import 'package:flutter_merakli/core/components/custom_green_background.dart';
 import 'package:flutter_merakli/core/constants/app_color.dart';
 import 'package:flutter_merakli/core/constants/app_textstyle.dart';
 import 'package:flutter_merakli/core/controller/all_providers.dart';
 import 'package:flutter_merakli/view/login/login_view.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
 
 class WelcomeView extends ConsumerStatefulWidget {
   const WelcomeView({super.key});
@@ -114,50 +114,35 @@ class _WelcomeViewState extends ConsumerState<WelcomeView> {
     );
   }
 
-  Stack _whatMethod(BuildContext context) {
-    return Stack(
-      children: [
-        Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.center,
-              colors: [
-                const Color.fromARGB(255, 37, 152, 125).withOpacity(0.7),
-                AppColor.primaryColor.withOpacity(0.3),
-                AppColor.primaryColor.withOpacity(0.3)
-              ],
+  Widget _whatMethod(BuildContext context) {
+    return CustomGreenBackground(
+      child: Column(
+        children: [
+          const SizedBox(
+            height: 80,
+          ),
+          Center(
+            child: Text(
+              "Neden Kullanmalı? ",
+              style: AppTextStyle.aeonikBold(context),
             ),
           ),
-        ),
-        Column(
-          children: [
-            const SizedBox(
-              height: 80,
-            ),
-            Center(
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25),
+            child: Center(
               child: Text(
-                "Neden Kullanmalı? ",
-                style: AppTextStyle.aeonikBold(context),
+                textWhat,
+                textAlign: TextAlign.center,
+                style: AppTextStyle.aeonikRegular(context),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 25),
-              child: Center(
-                child: Text(
-                  textWhat,
-                  textAlign: TextAlign.center,
-                  style: AppTextStyle.aeonikRegular(context),
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 80,
-            ),
-            Image.asset(Assets.image.imUndrawPNG),
-          ],
-        ),
-      ],
+          ),
+          const SizedBox(
+            height: 80,
+          ),
+          Image.asset(Assets.image.imUndrawPNG),
+        ],
+      ),
     );
   }
 

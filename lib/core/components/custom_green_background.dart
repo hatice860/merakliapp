@@ -3,11 +3,12 @@ import 'package:flutter_merakli/assets.dart';
 import 'package:flutter_merakli/core/constants/app_color.dart';
 import 'package:svg_flutter/svg_flutter.dart';
 
-class CustomGradientBackground extends StatelessWidget {
+class CustomGreenBackground extends StatelessWidget {
+  const CustomGreenBackground(
+      {super.key, this.child, this.leading, this.trailing});
   final Widget? child;
-  final Widget leading;
-  const CustomGradientBackground(
-      {super.key, this.child, required this.leading});
+  final Widget? leading;
+  final Widget? trailing;
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +20,7 @@ class CustomGradientBackground extends StatelessWidget {
               begin: Alignment.topCenter,
               end: Alignment.center,
               colors: [
-                AppColor.splashTextColor.withOpacity(0.55),
+                const Color.fromARGB(255, 37, 152, 125).withOpacity(0.7),
                 AppColor.primaryColor.withOpacity(0.3),
                 AppColor.primaryColor.withOpacity(0.3)
               ],
@@ -32,12 +33,11 @@ class CustomGradientBackground extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 30),
               child: Row(
                 children: [
-                  leading,
+                  Container(child: leading),
                   const Spacer(),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 14.0),
-                    child: SvgPicture.asset(Assets.icon.icEllipsSVG),
-                  )
+                      padding: const EdgeInsets.symmetric(horizontal: 14.0),
+                      child: trailing)
                 ],
               ),
             ),
