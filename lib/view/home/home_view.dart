@@ -2,6 +2,7 @@ import 'package:flutter/Material.dart';
 import 'package:flutter_merakli/assets.dart';
 import 'package:flutter_merakli/core/components/custom_bottom_bar.dart';
 import 'package:flutter_merakli/core/components/custom_gradient_background.dart';
+import 'package:flutter_merakli/core/components/custom_scaffold.dart';
 import 'package:flutter_merakli/core/constants/app_textstyle.dart';
 import 'package:svg_flutter/svg.dart';
 
@@ -15,7 +16,7 @@ class HomeView extends StatefulWidget {
 class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return CustomScaffold(
       body: CustomGradientBackground(
         leading: _pointWidget,
         child: Column(

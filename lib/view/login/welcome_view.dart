@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_merakli/assets.dart';
 import 'package:flutter_merakli/core/components/custom_elevated_button.dart';
 import 'package:flutter_merakli/core/components/custom_green_background.dart';
+import 'package:flutter_merakli/core/components/custom_scaffold.dart';
 import 'package:flutter_merakli/core/constants/app_color.dart';
 import 'package:flutter_merakli/core/constants/app_textstyle.dart';
 import 'package:flutter_merakli/core/controller/all_providers.dart';
@@ -26,8 +27,7 @@ class _WelcomeViewState extends ConsumerState<WelcomeView> {
   Widget build(BuildContext context) {
     var page = ref.watch(currentPageProvider);
 
-    return Scaffold(
-      backgroundColor: AppColor.primaryColor,
+    return CustomScaffold(
       body: Stack(
         children: [
           PageView(

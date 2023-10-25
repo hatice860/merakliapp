@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_merakli/core/components/custom_appbar.dart';
 import 'package:flutter_merakli/core/components/custom_dropdown_menu.dart';
 import 'package:flutter_merakli/core/components/custom_elevated_button.dart';
+import 'package:flutter_merakli/core/components/custom_scaffold.dart';
 import 'package:flutter_merakli/core/components/custom_textfield.dart';
 import 'package:flutter_merakli/core/constants/app_color.dart';
 import 'package:flutter_merakli/core/constants/app_textstyle.dart';
@@ -28,12 +29,8 @@ class _SignupViewState extends State<SignupView> {
   DateTime? selectedDate = DateTime.now();
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: PreferredSize(
-          preferredSize: const CustomAppbar(
-            title: "",
-          ).preferredSize,
-          child: const CustomAppbar(title: "Meraklı")),
+    return CustomScaffold(
+      appBar: const CustomAppbar(title: "Meraklı"),
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 40),
         children: [

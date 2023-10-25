@@ -3,6 +3,7 @@ import 'package:flutter_merakli/assets.dart';
 import 'package:flutter_merakli/core/components/custom_activity_card.dart';
 import 'package:flutter_merakli/core/components/custom_bottom_bar.dart';
 import 'package:flutter_merakli/core/components/custom_gradient_background.dart';
+import 'package:flutter_merakli/core/components/custom_scaffold.dart';
 import 'package:flutter_merakli/core/constants/app_color.dart';
 import 'package:flutter_merakli/core/constants/app_textstyle.dart';
 import 'package:svg_flutter/svg.dart';
@@ -22,10 +23,23 @@ class _ActivityViewState extends State<ActivityView> {
     AppColor.appPurpleColor
   ];
 
+  final List<String> _textList = [
+    "Para",
+    "Kariyer",
+    "Evlilik",
+    "Akraba",
+    "Fıtrat",
+    "Müzik",
+    "Sevgili",
+    "Flört",
+    "Tarih",
+    "Ticaret",
+  ];
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      bottomNavigationBar: CustomBottomBar(),
+    return CustomScaffold(
+      bottomNavigationBar: const CustomBottomBar(),
       body: CustomGradientBackground(
         leading: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -59,8 +73,12 @@ class _ActivityViewState extends State<ActivityView> {
                       childAspectRatio: 2.1),
                   itemCount: 10,
                   itemBuilder: ((context, index) {
+                    String cardText = _textList[index];
+
                     return CustomActivityCard(
-                        color: _colorList[index % _colorList.length]);
+                      color: _colorList[index % _colorList.length],
+                      text: cardText,
+                    );
                   })),
             ),
           ],

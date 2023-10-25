@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_merakli/assets.dart';
 import 'package:flutter_merakli/core/components/custom_green_background.dart';
+import 'package:flutter_merakli/core/components/custom_scaffold.dart';
 import 'package:flutter_merakli/core/constants/app_color.dart';
 import 'package:flutter_merakli/core/constants/app_textstyle.dart';
 import 'package:svg_flutter/svg.dart';
@@ -11,7 +12,7 @@ class ProfileQuestionView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Color textColor = const Color(0xFFDDDDDD);
-    return Scaffold(
+    return CustomScaffold(
         body: CustomGreenBackground(
             leading: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -20,6 +21,9 @@ class ProfileQuestionView extends StatelessWidget {
             trailing: SvgPicture.asset(Assets.icon.icEllipsSVG),
             child: Column(
               children: [
+              const  SizedBox(
+                  height: 50,
+                ),
                 Container(
                   color: AppColor.appPurpleColor,
                   height: 62,

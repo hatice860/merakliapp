@@ -11,6 +11,7 @@ class _AssetsImage {
   final imPresentationPNG = 'assets/image/im_presentation.png';
   final imUndrawPNG = "assets/image/im_undraw.png";
   final imLinePNG = "assets/image/im_line.png";
+  final imUserPNG = "assets/image/im_user.png";
 }
 
 class _AssetsFont {
@@ -30,4 +31,13 @@ class _AssetsIcon {
   final icSearchSVG = 'assets/icon/ic_search.svg';
   final icEllipsSVG = 'assets/icon/ic_ellipse.svg';
   final icMenuSVG = 'assets/icon/ic_menu.svg';
+  final icLeftArrowSVG = 'assets/icon/ic_left_arrow.svg';
+  final icCloseSVG = 'assets/icon/ic_close.svg';
+  final icYourselfKnowSVG = 'assets/icon/ic_yourself_know.svg';
+  final icInfoCircleSVG = 'assets/icon/ic_info_circle.svg';
+  final icKeySVG = 'assets/icon/ic_key.svg';
+  final icLogoutSVG = 'assets/icon/ic_logout.svg';
+  final icNotificationSVG = 'assets/icon/ic_notification.svg';
+  final icQuestionSquareSVG = 'assets/icon/ic_question_square.svg';
+  final icUsersAltSVG = 'assets/icon/ic_users_alt.svg';
 }

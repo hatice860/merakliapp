@@ -4,38 +4,35 @@ import 'package:flutter_merakli/core/constants/app_textstyle.dart';
 import 'package:svg_flutter/svg.dart';
 import 'package:flutter_merakli/core/constants/app_color.dart';
 
-class CustomAppbar extends StatelessWidget {
-  const CustomAppbar({super.key, required this.title});
+class ProfileAppBar extends StatelessWidget {
+  const ProfileAppBar({super.key, required this.title, this.trailing});
   final String title;
+  final Widget? trailing;
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      
+      actions: [trailing ?? Container()],
       toolbarHeight: 100,
-      centerTitle: true,
       leading: Padding(
         padding: const EdgeInsets.only(left: 8),
         child: IconButton(
             onPressed: () {
               Navigator.pop(context);
             },
-            icon: SvgPicture.asset(Assets.icon.icBackButtonSVG)),
+            icon: SvgPicture.asset(Assets.icon.icLeftArrowSVG)),
       ),
       elevation: 0,
       shadowColor: Colors.grey,
       backgroundColor: AppColor.splashTextColor,
       title: Text(
         title,
-        style: AppTextStyle.aksharAppbarTitle(context),
+        style: AppTextStyle.arialText(context).copyWith(
+            fontSize: 21,
+            fontWeight: FontWeight.w700,
+            color: const Color(0xFFF0F0F0)),
         textAlign: TextAlign.center,
       ),
     );
   }
-
-  
-  
-}
-class AppPreferedSize{
-  Size get preferredSize => const Size.fromHeight(95);
 }

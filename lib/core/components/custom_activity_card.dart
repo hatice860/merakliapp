@@ -3,8 +3,9 @@ import 'package:flutter_merakli/core/constants/app_color.dart';
 import 'package:flutter_merakli/core/constants/app_textstyle.dart';
 
 class CustomActivityCard extends StatefulWidget {
-  const CustomActivityCard({super.key, required this.color});
+  const CustomActivityCard({super.key, required this.color, required this.text});
   final Color color;
+  final String text;
 
   @override
   State<CustomActivityCard> createState() => _CustomActivityCardState();
@@ -44,7 +45,7 @@ class _CustomActivityCardState extends State<CustomActivityCard> {
         decoration: BoxDecoration(color: widget.color),
         child: Center(
             child: Text(
-          "Para",
+          widget.text, // Metni widget'ın parametresinden al
           style: AppTextStyle.aeonikRegular(context)
               .copyWith(fontWeight: FontWeight.w300, color: Colors.white),
         )),
