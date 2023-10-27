@@ -1,8 +1,8 @@
 class ProfileMenuModel {
-  String icon;
-  String text;
-  String description;
-  Function? onTap;
+  final String icon;
+  final String text;
+  final String description;
+  final Function? onTap;
   ProfileMenuModel({
     required this.icon,
     required this.text,

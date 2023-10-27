@@ -12,6 +12,8 @@ class _AssetsImage {
   final imUndrawPNG = "assets/image/im_undraw.png";
   final imLinePNG = "assets/image/im_line.png";
   final imUserPNG = "assets/image/im_user.png";
+    final imUnionPNG = "assets/image/im_union.png";
+
 }
 
 class _AssetsFont {
@@ -40,4 +42,7 @@ class _AssetsIcon {
   final icNotificationSVG = 'assets/icon/ic_notification.svg';
   final icQuestionSquareSVG = 'assets/icon/ic_question_square.svg';
   final icUsersAltSVG = 'assets/icon/ic_users_alt.svg';
+  final icProfileUserSocialSVG = 'assets/icon/ic_profile_user_social.svg';
+    final icImageSVG = 'assets/icon/ic_image.svg';
+
 }

@@ -12,7 +12,7 @@ class ProfileQuestionView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Color textColor = const Color(0xFFDDDDDD);
-    return CustomScaffold(
+    return CustomScaffold (
         body: CustomGreenBackground(
             leading: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),

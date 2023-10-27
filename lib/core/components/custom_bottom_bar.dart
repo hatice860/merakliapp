@@ -1,6 +1,7 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_merakli/assets.dart';
+import 'package:flutter_merakli/core/constants/app_color.dart';
 import 'package:flutter_merakli/view/login/login_view.dart';
 import 'package:flutter_merakli/view/login/welcome_view.dart';
 import 'package:svg_flutter/svg.dart';
@@ -18,15 +19,13 @@ class _CustomBottomBarState extends State<CustomBottomBar> {
   @override
   Widget build(BuildContext context) {
     return CurvedNavigationBar(
-      
         onTap: (index) {
           setState(() {
             _index = index;
           });
         },
-        
         animationCurve: Curves.easeInOutExpo,
-        backgroundColor: Colors.white,
+        backgroundColor: AppColor.primaryColor.withOpacity(0.3),
         color: const Color(0xFFF0F0F0),
         items: [
           CircleAvatar(

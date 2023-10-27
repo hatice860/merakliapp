@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'package:flutter_merakli/firebase_options.dart';
+import 'package:flutter_merakli/view/login/splash_view.dart';
+import 'package:flutter_merakli/view/profile/profile_settings_view.dart';
 
 import 'package:flutter_merakli/view/profile/profile_view.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -31,6 +33,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: myTheme,
-        home: const ProfileView());
+        home: const ProfileSettingsView());
   }
 }

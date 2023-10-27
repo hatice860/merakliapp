@@ -16,7 +16,7 @@ class HomeView extends StatefulWidget {
 class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
-    return CustomScaffold(
+    return Scaffold(
       body: CustomGradientBackground(
         leading: _pointWidget,
         child: Column(

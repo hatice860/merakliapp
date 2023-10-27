@@ -27,7 +27,7 @@ class _WelcomeViewState extends ConsumerState<WelcomeView> {
   Widget build(BuildContext context) {
     var page = ref.watch(currentPageProvider);
 
-    return CustomScaffold(
+    return Scaffold(
       body: Stack(
         children: [
           PageView(
