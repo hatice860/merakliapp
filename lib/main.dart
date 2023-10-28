@@ -4,6 +4,9 @@ import 'package:flutter/services.dart';
 
 import 'package:flutter_merakli/firebase_options.dart';
 import 'package:flutter_merakli/view/login/splash_view.dart';
+import 'package:flutter_merakli/view/profile/help_view.dart';
+import 'package:flutter_merakli/view/profile/know_yourself_view.dart';
+import 'package:flutter_merakli/view/profile/notification_view.dart';
 import 'package:flutter_merakli/view/profile/profile_settings_view.dart';
 
 import 'package:flutter_merakli/view/profile/profile_view.dart';
@@ -31,8 +34,6 @@ class MyApp extends StatelessWidget {
       colorScheme: myColorScheme,
     );
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: myTheme,
-        home: const ProfileSettingsView());
+        debugShowCheckedModeBanner: false, theme: myTheme, home: ProfileView());
   }
 }

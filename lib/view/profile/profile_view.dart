@@ -5,6 +5,8 @@ import 'package:flutter_merakli/core/components/custom_scaffold.dart';
 import 'package:flutter_merakli/core/components/profile_appbar.dart';
 import 'package:flutter_merakli/core/constants/app_textstyle.dart';
 import 'package:flutter_merakli/core/model/profile_menu_model.dart';
+import 'package:flutter_merakli/view/profile/notification_view.dart';
+import 'package:flutter_merakli/view/profile/profile_settings_view.dart';
 import 'package:svg_flutter/svg.dart';
 
 class ProfileView extends StatefulWidget {
@@ -25,7 +27,13 @@ class _ProfileViewState extends State<ProfileView> {
       ProfileMenuModel(
           icon: Assets.icon.icKeySVG,
           text: "Hesap",
-          description: "Hesap ayarları, Şifre işlemleri"),
+          description: "Hesap ayarları, Şifre işlemleri",
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const ProfileSettingsView()));
+          }),
       ProfileMenuModel(
           icon: Assets.icon.icProfileUserSocialSVG,
           text: "Sosyal Medya Hesaplarım",
@@ -33,7 +41,13 @@ class _ProfileViewState extends State<ProfileView> {
       ProfileMenuModel(
           icon: Assets.icon.icNotificationSVG,
           text: "Bildirimler",
-          description: "Sorro Bildirimler"),
+          description: "Sorro Bildirimler",
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const NotificationView()));
+          }),
       ProfileMenuModel(
           icon: Assets.icon.icQuestionSquareSVG,
           text: "Yardım",

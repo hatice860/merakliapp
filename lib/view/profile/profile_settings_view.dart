@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_merakli/assets.dart';
+import 'package:flutter_merakli/core/components/custom_appbar.dart';
 import 'package:flutter_merakli/core/components/custom_scaffold.dart';
 import 'package:flutter_merakli/core/components/custom_textfield.dart';
-import 'package:flutter_merakli/core/constants/app_color.dart';
 import 'package:flutter_merakli/core/constants/app_textstyle.dart';
 import 'package:flutter_merakli/core/model/text_form_field_model.dart';
 import 'package:svg_flutter/svg_flutter.dart';
@@ -38,17 +38,31 @@ class _ProfileSettingsViewState extends State<ProfileSettingsView> {
       TextFormFieldModel(name: ".......", text: "Sifre", obscureText: true),
     ];
     return CustomScaffold(
+      appBar: const CustomAppbar(
+          centerTitle: false, littleText: true, title: "Hesap Ayarları"),
       body: SingleChildScrollView(
         child: Column(
           children: [
+            const SizedBox(
+              height: 20,
+            ),
             _profileWidget(),
-            Text(
-              "Ayarlar",
-              textAlign: TextAlign.start,
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 40.0),
+                  child: Text(
+                    "AYARLAR",
+                    style: AppTextStyle.arialText(context)
+                        .copyWith(fontSize: 12, color: const Color(0xFF535353)),
+                  ),
+                ),
+              ],
             ),
             ..._items.map((item) => Padding(
                   padding: const EdgeInsets.symmetric(
-                      horizontal: 20.0, vertical: 12),
+                      horizontal: 42.0, vertical: 12),
                   child: CustomTextField(
                       obscureText: item.obscureText ?? false,
                       controller: item.controller,
@@ -71,7 +85,26 @@ class _ProfileSettingsViewState extends State<ProfileSettingsView> {
                               color: const Color(0xFF535353)),
                         ),
                       )),
-                ))
+                )),
+            Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 42.0, vertical: 8),
+              child: SizedBox(
+                  width: MediaQuery.of(context).size.width,
+                  height: 45,
+                  child: ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(0)),
+                          elevation: 0,
+                          backgroundColor: Colors.white),
+                      child: Text(
+                        "Kaydet",
+                        style: AppTextStyle.arialText(context).copyWith(
+                            fontSize: 17, color: const Color(0xFF258086)),
+                      ))),
+            )
           ],
         ),
       ),
@@ -84,8 +117,8 @@ class _ProfileSettingsViewState extends State<ProfileSettingsView> {
         Padding(
           padding: const EdgeInsets.only(bottom: 16.0, right: 20),
           child: Container(
-            height: 160,
-            width: 160,
+            height: 150,
+            width: 150,
             color: Colors.white,
             child: Align(
                 alignment: Alignment.bottomCenter,
