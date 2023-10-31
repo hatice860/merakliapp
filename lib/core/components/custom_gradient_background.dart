@@ -5,9 +5,9 @@ import 'package:svg_flutter/svg_flutter.dart';
 
 class CustomGradientBackground extends StatelessWidget {
   final Widget? child;
-  final Widget leading;
+  final Widget? leading;
   const CustomGradientBackground(
-      {super.key, this.child, required this.leading});
+      {super.key, this.child,  this.leading});
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,7 @@ class CustomGradientBackground extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 30),
               child: Row(
                 children: [
-                  leading,
+                  leading!,
                   const Spacer(),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 14.0),

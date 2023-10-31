@@ -23,6 +23,17 @@ class _LoginViewState extends State<LoginView> {
 
   final AuthService _authService = AuthService();
   bool isObscure = true;
+
+
+
+void _showSnackBar(String message) {
+  final snackBar = SnackBar(
+    content: Text(message),
+    duration: const Duration(seconds: 3),
+  );
+
+  ScaffoldMessenger.of(context).showSnackBar(snackBar);
+}
   @override
   Widget build(BuildContext context) {
     return CustomScaffold(

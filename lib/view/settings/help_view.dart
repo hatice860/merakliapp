@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_merakli/assets.dart';
 import 'package:flutter_merakli/core/components/custom_appbar.dart';
 import 'package:flutter_merakli/core/components/custom_scaffold.dart';
+import 'package:flutter_merakli/core/components/profile_appbar.dart';
 import 'package:flutter_merakli/core/constants/app_textstyle.dart';
 import 'package:svg_flutter/svg_flutter.dart';
 
@@ -16,10 +17,9 @@ class _HelpViewState extends State<HelpView> {
   @override
   Widget build(BuildContext context) {
     return CustomScaffold(
-      appBar: const CustomAppbar(
+      appBar: const ProfileAppBar(
         title: "Yardım",
-        littleText: true,
-        centerTitle: false,
+     
       ),
       body: Column(
         children: [

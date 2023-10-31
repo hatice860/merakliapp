@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_merakli/assets.dart';
-import 'package:flutter_merakli/core/components/custom_appbar.dart';
 import 'package:flutter_merakli/core/components/custom_scaffold.dart';
 import 'package:flutter_merakli/core/components/custom_textfield.dart';
+import 'package:flutter_merakli/core/components/profile_appbar.dart';
 import 'package:flutter_merakli/core/constants/app_textstyle.dart';
 import 'package:flutter_merakli/core/model/text_form_field_model.dart';
 import 'package:svg_flutter/svg_flutter.dart';
@@ -38,8 +38,7 @@ class _ProfileSettingsViewState extends State<ProfileSettingsView> {
       TextFormFieldModel(name: ".......", text: "Sifre", obscureText: true),
     ];
     return CustomScaffold(
-      appBar: const CustomAppbar(
-          centerTitle: false, littleText: true, title: "Hesap Ayarları"),
+      appBar: const ProfileAppBar(title: "Hesap Ayarları"),
       body: SingleChildScrollView(
         child: Column(
           children: [

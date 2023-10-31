@@ -45,5 +45,12 @@ class _AssetsIcon {
   final icImageSVG = 'assets/icon/ic_image.svg';
   final icPaperSVG = 'assets/icon/ic_paper.svg';
   final icExclamationSquareSVG = 'assets/icon/ic_exclamation_square.svg';
-  final icCloseAppbarSVG = 'assets/icon/ic_close_appbar.svg';
+  final icMegaphoneAltSVG = 'assets/icon/ic_megaphone_alt.svg';
+  final icCheckedSVG = 'assets/icon/ic_checked.svg';
+  final icFacebookSVG = 'assets/icon/ic_facebook.svg';
+  final icInstagramVG = 'assets/icon/ic_instagram.svg';
+  final icLinkedinSVG = 'assets/icon/ic_linkedin.svg';
+  final icTiktokSVG = 'assets/icon/ic_tiktok.svg';
+  final icTwitterXSVG = 'assets/icon/twitter-x-seeklogo.com-4.svg';
+  final icYoutubeSVG = 'assets/icon/ic_youtube.svg';
 }

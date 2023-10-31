@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_merakli/core/components/custom_appbar.dart';
 import 'package:flutter_merakli/core/components/custom_scaffold.dart';
 import 'package:flutter_merakli/core/components/custom_switch.dart';
+import 'package:flutter_merakli/core/components/profile_appbar.dart';
 import 'package:flutter_merakli/core/constants/app_textstyle.dart';
 
 class NotificationView extends StatelessWidget {
@@ -10,10 +11,9 @@ class NotificationView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomScaffold(
-      appBar: const CustomAppbar(
+      appBar: const ProfileAppBar(
         title: "Bildirimler",
-        centerTitle: false,
-        littleText: true,
+
       ),
       body: SingleChildScrollView(
         child: Column(

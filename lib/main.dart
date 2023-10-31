@@ -3,13 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'package:flutter_merakli/firebase_options.dart';
-import 'package:flutter_merakli/view/login/splash_view.dart';
-import 'package:flutter_merakli/view/profile/help_view.dart';
-import 'package:flutter_merakli/view/profile/know_yourself_view.dart';
-import 'package:flutter_merakli/view/profile/notification_view.dart';
-import 'package:flutter_merakli/view/profile/profile_settings_view.dart';
 
+import 'package:flutter_merakli/view/login/welcome_view.dart';
 import 'package:flutter_merakli/view/profile/profile_view.dart';
+import 'package:flutter_merakli/view/profile/profile_yourself_know.dart';
+
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() async {
